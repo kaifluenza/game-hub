@@ -10,11 +10,13 @@ function App() {
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
       }}
-      templateColumns={
-        {base:"1fr", //small screen: columns stretches and take up all available spaces
-          lg:"200px 1fr" //big screen: left column(aside) is 200px, right column stretches to take up available spaces
-        }
-      }
+      templateColumns={{
+        base: "1fr",
+        //small screen: columns stretches and take up all available spaces
+        lg: "200px 1fr",
+        //big screen: left column(aside) is 200px,
+        //right column stretches to take up available spaces
+      }}
     >
       <GridItem area="nav">
         <NavBar />
