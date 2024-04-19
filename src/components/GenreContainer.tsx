@@ -6,11 +6,7 @@ interface Props {
 }
 
 const GenreContainer = ({ children }: Props) => {
-  return (
-    <List>
-      <ListItem borderRadius={8} paddingY="5px">{children}</ListItem>
-    </List>
-  );
+  return <List borderRadius={8} paddingY="5px">{children}</List>;
 };
 
 export default GenreContainer;
