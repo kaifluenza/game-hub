@@ -1,4 +1,6 @@
 const getCroppedImageUrl = (url:string) => {
+    if(!url) return "";
+    
     const target = 'media/';
     const index = url.indexOf(target) + target.length; 
     //refers to index of _ as in "media/_" which is where we want to insert
