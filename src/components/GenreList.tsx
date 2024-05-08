@@ -22,21 +22,23 @@ const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-  if (error) return null;
+  // if (error) return null;
+
   //if (isLoading) return <Spinner />;
 
   return (
     <>
-      {isLoading &&
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
+
+      {/* {isLoading &&
         skeletons.map((skeleton) => (
           <GenreContainer key={skeleton}>
             <GenreSkeleton />
           </GenreContainer>
-        ))}
+        ))} */}
 
-      <Heading fontSize="2xl" marginBottom={3}>
-        Genres
-      </Heading>
       <List>
         {data.map((genre) => (
           <GenreContainer key={genre.id}>
